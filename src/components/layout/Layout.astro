@@ -1,0 +1,26 @@
+---
+import "../../styles/global.css"
+import Menu from "./Menu.astro"
+import Footer from "./Footer.astro"
+const { title = "South Florida Cleaning Services by Cleaner Queen" } =
+  Astro.props
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+
+    <title>{title}</title>
+  </head>
+  <body class="flex flex-col gap-2 min-h-screen">
+    <Menu />
+    <main class="pt-12 2xl:pt-16">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

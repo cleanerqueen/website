@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets"
+import Layout from "../components/layout/Layout.astro"
+import "../styles/global.css"
+import mainImage from "../assets/broom-dirty-floor-cleaning.jpg"
+---
+
+<Layout title="Home | South Florida Cleaning Services by Cleaner Queen">
+  <!-- This is the content for the home page about cleaning services by a company called cleaner queen -->
+  <div
+    class="w-11/12 mx-auto max-w-[100rem] flex flex-col lg:flex-row py-5 gap-4"
+  >
+    <div class="w-full overflow-hidden rounded-2xl aspect-square">
+      <Image
+        src={mainImage}
+        alt="Cleaning Service"
+        class="w-full aspect-square object-cover"
+        fit="cover"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        loading="eager"
+      />
+    </div>
+    <div class="w-full">
+      <h1 class="text-4xl font-black uppercase text-blue-800">
+        South Florida Cleaning Services by Cleaner Queen
+      </h1>
+    </div>
+  </div></Layout
+>
